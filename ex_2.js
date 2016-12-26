@@ -7,6 +7,10 @@
 //[3, 4, 1] -> 8
 function addNumbers(array) {
   //your code here!
+  var summArr = array.reduce(function( previous, current ){
+    return previous + current;
+  }, 0);
+  return summArr;
 };
 
 //Write a function that tells you whether an array contains a given
@@ -16,6 +20,9 @@ function addNumbers(array) {
 
 function hasItem(array, match) {
   //your code here
+  array.filter(function(){
+    return match
+  })
 };
 
 //Write a function that tells you the highest value in a given array

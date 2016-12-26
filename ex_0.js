@@ -4,8 +4,9 @@
 //eg 'bats' ->  'batss'
 
 function firstFunction(string) {
-  //your code here
-}
+  return func(string) + 's';
+};
+
 
 
 exports.firstFunction = firstFunction;
