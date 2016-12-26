@@ -19,10 +19,14 @@ function addNumbers(array) {
 //    ['slugs are better whatever'], 'sloth' -> true
 
 function hasItem(array, match) {
-  //your code here
-  array.filter(function(){
-    return match
-  })
+
+  var bool = false;
+
+  if(array.indexOf(match) !== -1){
+    bool = true;
+  };
+
+  return bool;
 };
 
 //Write a function that tells you the highest value in a given array
@@ -30,7 +34,12 @@ function hasItem(array, match) {
 // [6, 4, 6] -> 6
 function highestNumber(array) {
   //your code here
+  var highest = array.reduce(function( highest, current ){
+    return Math.max(highest,current);
+  }, 0);
+  return highest;
 };
+
 
 //Write a function that adds an s to the end of each string in an array
 
@@ -38,6 +47,12 @@ function highestNumber(array) {
 //eg: ['snakes', 'baby'] -> ['snakess', 'babys']
 function pluralize(array) {
   //your code here
+
+  // var plarArr = array.map((item) => item + 's');
+  var pluralized = array.map(function(item){
+    return( item + 's');
+  });
+  return pluralized;
 };
 
 exports.addNumbers = addNumbers;
