@@ -99,10 +99,9 @@ SlothRanch.prototype.makeBabySloth = function(name, favoriteTree) {
 }*/
 
 SlothRanch.prototype.feedSloths = function() {
-  for(var i = 0; i < this.grove.length(); i++){
-    this.grove[i].feed;
-  }
-  //your code here!
+  this.grove.forEach(function(sloth){
+    sloth.feed;
+  });
 };
 
 //We need to be able to track down which sloths are in which tree. To do that we want to write a function that takes in a string of a type of tree and then returns an array of the names of ALL of the sloths that have that tree as their favoriteTree
@@ -111,8 +110,10 @@ SlothRanch.prototype.feedSloths = function() {
 //eg: ranchoSlotho.findSloths('mangrove') -> ['Violet']
 
 SlothRanch.prototype.findSloths = function(tree) {
+  var slothsInGrove = this.grove;
   var slothsInTreeType;
-  slothsInTreeType = this.grove.flter(function(sloth){
+
+  slothsInTreeType = slothsInGrove.flter(function(sloth){
     return sloth.favoriteTree === tree;
   });
   return slothsInTreeType;
@@ -133,6 +134,11 @@ then:
 ranchoSlotho.fedPerDay() -> [3, 11, 10]*/
 
 SlothRanch.prototype.fedPerDay = function() {
+
+// var this.grove.reduce(function(sloth){
+//   this.feedings.
+//   } )
+
   //your code here!
 };
 
