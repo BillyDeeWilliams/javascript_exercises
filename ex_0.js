@@ -4,7 +4,7 @@
 //eg 'bats' ->  'batss'
 
 function firstFunction(string) {
-  return func(string) + 's';
+  return (string) + 's';
 };
 
 

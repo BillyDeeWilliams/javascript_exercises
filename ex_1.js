@@ -30,10 +30,10 @@ function mainInitial(name) {
 
 function reverseString(string) {
   var front = String(string);
-  var back = ' ';
+  var back = '';
 //front.length - 1 = last index of front
   for ( var i = front.length - 1; i >= 0 ; i--){
-    back.push(front[i]);
+    back += (front[i]);
   }
   return back;
 }
